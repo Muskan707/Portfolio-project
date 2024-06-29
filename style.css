@@ -1,0 +1,399 @@
+/* Define the color scheme */
+:root {
+    --hunter-green: #355E3B;
+    --white-dove: #F0F0F0;
+    --white: #FFFFFF;
+    --accent-color: #c5e1a5;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--hunter-green);
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--hunter-green);
+    color: var(--white);
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navigation is above other content */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+
+section {
+    padding: 4em 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('piccc.jpg') center/cover no-repeat; /* Adjust path to your image */
+    background-position: center;
+    color: var(--hunter-green);
+    text-align: center;
+    position: relative;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.home-text {
+    text-align:left;
+    color: #FFFFFF;
+    padding-right: 60px;
+}
+
+.home-text h1 {
+    font-size: 2.5rem;
+    margin-bottom:5px;
+}
+
+.home-text p {
+    font-size: 1.5rem;
+
+}
+
+
+#about {
+    background: var(--white-dove);
+    color: var(--hunter-green);
+    text-align: center;
+    padding: 4em 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 35%; /* Adjust width of image column */
+    padding: 0 1em;
+}
+
+.about-img img {
+    height: 350px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 55%;
+    padding: 0 1em;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 1em;
+}
+
+.about-text p {
+    font-size: 1.2rem; 
+    line-height: 1.6;
+}
+
+.education-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.education-column {
+    width: 30%;
+    background: var(--white-dove);
+    padding: 1em;
+    margin: 0.5em;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-column h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.skill {
+    background: var(--white-dove);
+    color: var(--hunter-green);
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+}
+
+.skill-level {
+    background: var(--accent-color);
+    height: 10px;
+    border-radius: 4px;
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.skill-level-bar {
+    height: 100%;
+    width: 0;
+    background: var(--hunter-green);
+    transition: width 0.6s ease;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.project {
+    width: 80%;
+    background: var(--white-dove);
+    padding: 1.5em;
+    border-radius: 12px;
+    border: 2px solid var(--hunter-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: var(--hunter-green);
+}
+
+.project p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: var(--hunter-green);
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--hunter-green);
+    border-bottom: 2px solid var(--hunter-green);
+    display: inline-block;
+    padding-bottom: 0.5em;
+}
+
+.footer-content {
+    background: var(--hunter-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content .social-links {
+    margin-top: 1em;
+}
+
+.footer-content .social-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 1em;
+}
+
+.footer-content .social-links a:hover {
+    color: var(--accent-color);
+}
+
+.achievements {
+    background: var(--white-dove);
+    color: var(--hunter-green);
+    padding: 4em 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.achievements p {
+    font-size:80px ;
+    font-weight: 300;
+}
+
+#contact {
+    background: var(--hunter-green);
+    color: var(--white);
+    text-align: center;
+    padding: 4em 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+}
+
+form button {
+    background: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: darken(var(--accent-color), 10%);
+}
+
+.social-links {
+    margin-top: 1em;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 1em;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-content {
+    background: var(--hunter-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content .social-links {
+    margin-top: 1em;
+}
+
+.footer-content .social-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 1em;
+}
+
+.footer-content .social-links a:hover {
+    color: var(--accent-color);
+}
